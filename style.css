@@ -1,0 +1,41 @@
+:root {
+    --size: 10;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5px;
+}
+#container {
+  background: black;
+  display: inline-block;
+  border: 2px solid black;
+}
+@media(min-width: 550px){
+  #grid{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+    gap:1px;
+  }
+}
+@media (max-width: 550px){
+  #grid{
+    width: 250px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+    gap:1px;
+  }
+}
+
+h1
+{
+    font-size: 30px;
+    text-align: center;
+}
